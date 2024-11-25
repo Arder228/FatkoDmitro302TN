@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація користувача</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2196f3;
+            color: white;
+            padding: 10px 20px;
+        }
+        .top-bar .left {
+            font-size: 16px;
+        }
+        .top-bar .left p:first-child {
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+            margin: 0;
+        }
+        .top-bar .left p:last-child {
+            margin: 0;
+        }
+        .top-bar .right button {
+            background-color: white;
+            color: #2196f3;
+            border: none;
+            border-radius: 3px;
+            padding: 5px 10px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+        .top-bar .right button:hover {
+            background-color: #e0e0e0;
+        }
+        .container {
+            width: 300px;
+            margin: 50px auto 0;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        .header {
+            background-color: #2196f3;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .form-section {
+            background-color: white;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        input, select {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        button.submit {
+            width: 100%;
+            padding: 7px;
+            background-color: #2196f3;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            font-size: 14px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button.submit:hover {
+            background-color: #1976d2;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            padding: 10px 0;
+            background: #f2f2f2;
+        }
+        .footer a {
+            color: #2196f3;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="left">
+            <p>Моя сторінка</p>
+            <p>Фатко Дмитро</p>
+        </div>
+        <div class="right">
+            <button>Вхід</button>
+            <a href="FatkoLab010-1.html"><button>Реєстрація</button></a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="header">
+            Реєстрація користувача
+        </div>
+        <div class="form-section">
+            <form action="#" method="POST">
+                <label for="last-name">Прізвище</label>
+                <input type="text" id="last-name" name="last-name" required>
+                <label for="first-name">Ім'я</label>
+                <input type="text" id="first-name" name="first-name" required>
+                <label for="login">Логін</label>
+                <input type="text" id="login" name="login" required>
+                <label for="group">Навчальна група</label>
+                <select id="group" name="group" required>
+                    <option value="301TN">301TN</option>
+                    <option value="302TN">302TN</option>
+                    <option value="303TN">303TN</option>
+                    <option value="304TN">304TN</option>
+                    <option value="305TN">305TN</option>
+                </select>
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" required>
+                <label for="confirm-password">Підтвердження паролю</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <button type="submit" class="submit">Зареєструватись</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+       <p>&#169Усі права захищені</p>
+        <p>Факто Дмитро 302-ТН</p>
+    </div>
+</body>
+</html>
+
