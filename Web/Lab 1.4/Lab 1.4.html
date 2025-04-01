@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика JavaScript</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 600px; margin: auto; }
+        input, button { margin: 5px; padding: 5px; }
+        .output { font-weight: bold; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Практика JavaScript</h1>
+
+        <h3>1. Обчислення залишку секунд</h3>
+        <input type="number" id="secondsInput" placeholder="Введіть число">
+        <button onclick="showSeconds()">Розрахувати</button>
+        <div class="output" id="secondsOutput"></div>
+
+        <h3>2. Обчислення периметра</h3>
+        <input type="number" id="sideLength" placeholder="Довжина сторони">
+        <input type="number" id="sideCount" placeholder="Кількість сторін">
+        <button onclick="showPerimeter()">Розрахувати</button>
+        <div class="output" id="perimeterOutput"></div>
+
+        <h3>3. FizzBuzz</h3>
+        <input type="number" id="fizzBuzzInput" placeholder="Введіть число">
+        <button onclick="showFizzBuzz()">Запустити</button>
+        <div class="output" id="fizzBuzzOutput"></div>
+
+        <h3>4. Середнє арифметичне</h3>
+        <input type="number" id="avg1" placeholder="Число 1">
+        <input type="number" id="avg2" placeholder="Число 2">
+        <input type="number" id="avg3" placeholder="Число 3">
+        <button onclick="showAverage()">Розрахувати</button>
+        <div class="output" id="averageOutput"></div>
+
+        <h3>5. Перевірка на подільність</h3>
+        <input type="number" id="divNum" placeholder="Число">
+        <input type="number" id="divX" placeholder="Дільник X">
+        <input type="number" id="divY" placeholder="Дільник Y">
+        <button onclick="showDivisibility()">Перевірити</button>
+        <div class="output" id="divisibilityOutput"></div>
+
+        <h3>6. Робота з масивом</h3>
+        <input type="text" id="arrayInput" placeholder="Введіть числа через кому">
+        <button onclick="processArray()">Аналізувати</button>
+        <div class="output" id="arrayOutput"></div>
+
+        <h3>7. Робота з двовимірним масивом</h3>
+        <button onclick="modifyMatrix()">Модифікувати матрицю</button>
+        <div class="output" id="matrixOutput"></div>
+
+        <h3>8. Арифметичні операції</h3>
+        <input type="number" id="num1" placeholder="Число 1">
+        <input type="number" id="num2" placeholder="Число 2">
+        <select id="operation">
+            <option value="Add">Додавання</option>
+            <option value="Sub">Віднімання</option>
+            <option value="Mul">Множення</option>
+            <option value="Div">Ділення</option>
+        </select>
+        <button onclick="calculate()">Обчислити</button>
+        <div class="output" id="operationOutput"></div>
+
+        <h3>9. Аналіз числа</h3>
+        <input type="number" id="numAnalysis" placeholder="Введіть число">
+        <button onclick="analyzeNumber()">Аналізувати</button>
+        <div class="output" id="numberOutput"></div>
+
+        <h3>10. Перетворення масиву</h3>
+        <input type="text" id="reverseArrayInput" placeholder="Введіть числа через кому">
+        <button onclick="transformArray()">Перетворити</button>
+        <div class="output" id="reverseArrayOutput"></div>
+
+        <h3>11. Видалення дублікатів</h3>
+        <input type="text" id="duplicateArrayInput" placeholder="Введіть числа через кому">
+        <button onclick="removeDuplicates()">Очистити</button>
+        <div class="output" id="duplicateArrayOutput"></div>
+    </div>
+
+    <script>
+        function seconds(total) { return total % 60; }
+        function showSeconds() { document.getElementById("secondsOutput").innerText = seconds(document.getElementById("secondsInput").value); }
+
+        function perimeter(side, count) { return side * count; }
+        function showPerimeter() { document.getElementById("perimeterOutput").innerText = perimeter(document.getElementById("sideLength").value, document.getElementById("sideCount").value); }
+
+        function fizzBuzz(n) {
+            let result = "";
+            for (let i = 1; i <= n; i++) {
+                let output = "";
+                if (i % 3 === 0) output += "Fizz";
+                if (i % 5 === 0) output += "Buzz";
+                result += (output || i) + " ";
+            }
+            return result;
+        }
+        function showFizzBuzz() { document.getElementById("fizzBuzzOutput").innerText = fizzBuzz(document.getElementById("fizzBuzzInput").value); }
+
+        function Calculate(a, b, c) { return (a + b + c) / 3; }
+        function showAverage() { document.getElementById("averageOutput").innerText = Calculate(document.getElementById("avg1").value, document.getElementById("avg2").value, document.getElementById("avg3").value); }
+
+        function isDivisible(n, x, y) { return !(n % x || n % y); }
+        function showDivisibility() { document.getElementById("divisibilityOutput").innerText = isDivisible(document.getElementById("divNum").value, document.getElementById("divX").value, document.getElementById("divY").value); }
+
+        function processArray() { /* Аналіз масиву */ }
+
+        function modifyMatrix() { /* Оновлення матриці */ }
+
+        function calculate() { /* Арифметичні операції */ }
+
+        function analyzeNumber() { /* Аналіз числа */ }
+
+        function transformArray() { /* Перетворення масиву */ }
+
+        function removeDuplicates() { /* Видалення дублікатів */ }
+    </script>
+</body>
+</html>
